@@ -1,0 +1,131 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+/* Custom Property */
+:root{
+  --white-clr:#fff;
+  --clr-1:#4e54c8;
+  --clr-2:#8f94fb;
+  --clr-3:#333;
+  --clr-4:#00aedf;
+  --clr-5:#006c8a;
+  --clr-6:#ccc;
+}
+/* RESET */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins',sans-serif;
+  color: var(--clr-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--clr-1),var(--clr-2));
+}
+.countdown-container{
+  background: var(--white-clr);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+}
+h1{
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.input-container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.input-container input{
+  width: 70px;
+  padding: 10px;
+  font: inherit;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+.input-container span{
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-block: 16px;
+}
+.progress-circle{
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: conic-gradient(var(--clr-4) 0%,#ddd 0%);
+  border-radius: 50%;
+  transition: background 0.3s linear;
+}
+.circle-inner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 230px;
+  height: 230px;
+  background: var(--white-clr);
+  border-radius: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+#timer{
+  font-size: 36px;
+}
+.timer-display,
+.announcement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.announcement {
+  display: none;
+}
+.button-container{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.btn{
+  background: var(--clr-4);
+  color: var(--white-clr);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn:hover{
+  background: var(--clr-5);
+}
+.btn:disabled{
+  background: var(--clr-6);
+}
+.announcement.display {
+  display: block;
+}
+
+  
+  
